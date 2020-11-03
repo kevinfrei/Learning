@@ -12,6 +12,7 @@ public class Main {
   }
 
   public static void main(String[] args) {
+    RationalNumber.sample();
     FixedPoint zero = new FixedPoint(0, 0);
     FixedPoint one = new FixedPoint(1, 0);
     FixedPoint two = new FixedPoint(2, 0);
