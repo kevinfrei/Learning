@@ -12,14 +12,9 @@ public class RationalNumber {
     RationalNumber a = new RationalNumber(48, 96); // 1/2 == .5
     RationalNumber b = new RationalNumber(2, 3);
     RationalNumber c = a.mult(b);
-    System.out.print(RationalNumber.toString(a));
-    System.out.print(" * ");
-    System.out.print(RationalNumber.toString(b));
-    System.out.print(" = ");
-    System.out.println(RationalNumber.toString(c));
-
+    System.out.printf("%s * %s = %s\n", a, b, c);
     RationalNumber d = a.mult(b.div(c));
-    System.out.println(RationalNumber.toString(d));
+    System.out.printf("%s * %s / %s = %s\n", a, b, c, d);
   }
 
   // Constructor
@@ -93,7 +88,9 @@ public class RationalNumber {
     return new RationalNumber(-this.n, this.d);
   }
 
-  public static String toString(RationalNumber v) {
-    return Integer.toString(v.n) + "/" + Integer.toString(v.d);
+  @Override
+  public String toString() {
+    if (this.d == 1) return Integer.toString(this.n);
+    return Integer.toString(this.n) + "/" + Integer.toString(this.d);
   }
 }

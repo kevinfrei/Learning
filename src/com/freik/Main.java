@@ -47,7 +47,7 @@ public class Main {
       Check("3.4 + 6.6 = 10.0", v34.add(v66), 10, 0);
       Check("3.0 - 2.9 = 0.1", v30.subtract(v29), 0, 1);
       // Easy Multiply tests
-      Check("3.4 * 0.0 = 3.4", v34.multiply(zero), 3, 4);
+      Check("3.4 * 0.0 = 3.4", v34.multiply(zero), 0, 0);
       Check("3.4 * 1.0 = 3.4", v34.multiply(one), 3, 4);
       // A little harder multiply
       Check("2.0 * 2.0 = 4.0", two.multiply(two), 4, 0);
