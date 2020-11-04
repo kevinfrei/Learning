@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88eaa792-558e-42cd-9b7b-9da7c232c964" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/freik/RationalNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/freik/FixedPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/FixedPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/freik/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/freik/RationalNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/RationalNumber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -53,6 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -92,5 +97,67 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2262" height="361" key="GridCell.Tab.0.bottom" timestamp="1604453845090">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state width="2262" height="361" key="GridCell.Tab.0.bottom/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453845090" />
+    <state width="2262" height="361" key="GridCell.Tab.0.center" timestamp="1604453845088">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state width="2262" height="361" key="GridCell.Tab.0.center/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453845088" />
+    <state width="2262" height="361" key="GridCell.Tab.0.left" timestamp="1604453845087">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state width="2262" height="361" key="GridCell.Tab.0.left/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453845087" />
+    <state width="2262" height="361" key="GridCell.Tab.0.right" timestamp="1604453845089">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state width="2262" height="361" key="GridCell.Tab.0.right/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453845089" />
+    <state width="2262" height="444" key="GridCell.Tab.1.bottom" timestamp="1604453249892">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state width="2262" height="444" key="GridCell.Tab.1.bottom/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453249892" />
+    <state width="2262" height="444" key="GridCell.Tab.1.center" timestamp="1604453249889">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state width="2262" height="444" key="GridCell.Tab.1.center/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453249889" />
+    <state width="2262" height="444" key="GridCell.Tab.1.left" timestamp="1604453249888">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state width="2262" height="444" key="GridCell.Tab.1.left/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453249888" />
+    <state width="2262" height="444" key="GridCell.Tab.1.right" timestamp="1604453249891">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state width="2262" height="444" key="GridCell.Tab.1.right/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453249891" />
+    <state x="900" y="329" key="SettingsEditor" timestamp="1604450590409">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state x="900" y="329" key="SettingsEditor/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604450590409" />
+    <state x="1644" y="204" width="1958" height="865" key="dock-window-1" timestamp="1604452531502">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state x="1644" y="204" width="1958" height="865" key="dock-window-1/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604452531502" />
+    <state x="817" y="310" key="run.anything.popup" timestamp="1604453264453">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state x="817" y="310" key="run.anything.popup/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453264453" />
+    <state x="817" y="312" width="670" height="676" key="search.everywhere.popup" timestamp="1604454935110">
+      <screen x="0" y="23" width="2304" height="1273" />
+    </state>
+    <state x="817" y="312" width="670" height="676" key="search.everywhere.popup/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604454935110" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/freik/Main.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
