@@ -1,6 +1,6 @@
 package com.freik;
 
-public class FixedPoint {
+public class FixedPoint implements INumber<FixedPoint> {
   int w, f;
 
   public FixedPoint(/*FixedPoint this, */ int whole, int fraction) {
@@ -10,21 +10,25 @@ public class FixedPoint {
     this.f = fraction;
   }
 
+  @Override
   public FixedPoint add(FixedPoint b) {
     // WWWWWWWW.F
     // wwwwwwww.f
     //          (F + f)
+    // 1.4 + 2.5 =
+    // this.w = 1, this.f = 4
+    // b.w = 2, b.f = 5
+    int newW = this.w + b.w;
     int newF = this.f + b.f;
-    int carry = 0;
-    if (newF >= 10) {
-      carry = 1;
-      newF -= 10;
+    if (newF > 9) {
+      newW = newW + 1;
+      newF = newF - 10;
     }
-    int newW = this.w + b.w + carry;
     return new FixedPoint(newW, newF);
   }
 
-  public FixedPoint subtract(FixedPoint b) {
+  @Override
+  public FixedPoint sub(FixedPoint b) {
     int newF = this.f - b.f;
     if (newF < 0) {
       // This is for a borrow code
@@ -43,7 +47,8 @@ public class FixedPoint {
     return new FixedPoint(newW, newF);
   }
 
-  public FixedPoint multiply(FixedPoint b) {
+  @Override
+  public FixedPoint mul(FixedPoint b) {
     // 1234.5
     // 6789.2
     // *______
@@ -69,7 +74,8 @@ public class FixedPoint {
     return whole.add(thisTimesBf.add(bTimesThisF.add(fTimesF)));
   }
 
-  public FixedPoint divide(FixedPoint b) {
+  @Override
+  public FixedPoint div(FixedPoint b) {
     // This is a bit of a cheat, but works...
     int thisNum = this.w * 10 + this.f;
     int bNum = b.w * 10 + b.f;
@@ -77,7 +83,8 @@ public class FixedPoint {
     return new FixedPoint(res / 10, res % 10);
   }
 
-  public FixedPoint negate() {
+  @Override
+  public FixedPoint neg() {
     return new FixedPoint(-this.w, this.f);
   }
 
@@ -86,8 +93,7 @@ public class FixedPoint {
   }
 
   public boolean lessThan(FixedPoint b) {
-    if (this.w == b.w)
-      return this.f < b.w;
+    if (this.w == b.w) return this.f < b.w;
     return this.w < b.w;
   }
 

@@ -1,28 +1,30 @@
 package com.freik;
 
 // TODO; Good example for static methods!
-
-public class RationalNumber {
+// https://github.com/kevinfrei/Learning
+public class RationalNumber implements INumber<RationalNumber> {
   // Numerator & Denominator
-
   private int n, d;
 
   // This is for some simple testing
-  public static void sample() throws Exception {
+  public static void test() {
+    int num = 1;
     RationalNumber a = new RationalNumber(48, 96); // 1/2 == .5
+    System.out.printf("a = %s\n", a);
     RationalNumber b = new RationalNumber(2, 3);
-    RationalNumber c = a.mult(b);
+    System.out.printf("b = %s\n", b);
+    RationalNumber c = a.mul(b); // a * b
+    RationalNumber s = RationalNumber.statMul(a, b);
+
     System.out.printf("%s * %s = %s\n", a, b, c);
-    RationalNumber d = a.mult(b.div(c));
+    RationalNumber d = a.mul(b.div(c));
     System.out.printf("%s * %s / %s = %s\n", a, b, c, d);
   }
 
   // Constructor
-  public RationalNumber(/* RationNumber this, */ int numer, int denom) throws Exception {
+  public RationalNumber(/* RationNumber this, */ int numer, int denom) {
     // ERROR CHECKING!!!
-    if (denom == 0) {
-      throw new Exception("DIVIDE BY ZERO! ARGH!");
-    }
+
     this.n = numer;
     this.d = denom;
 
@@ -39,9 +41,13 @@ public class RationalNumber {
       this.d = -this.d;
       this.n = -this.n;
     }
+    // Know for sure d & n are fully simplified & n is the only neg value
+    // (1, -2) => (-1, 2)
   }
+
+  @Override
   // Multiply
-  public RationalNumber mult(/* RationalNumber this, */ RationalNumber b) throws Exception {
+  public RationalNumber mul(/* RationalNumber this, */ RationalNumber b) {
     /*   x   m   (x * m)
      *   - * - = -------
      *   y   n   (y * n)
@@ -53,20 +59,29 @@ public class RationalNumber {
     int resd = this.d * b.d;
     return new RationalNumber(resn, resd);
   }
+
+  public static RationalNumber statMul(RationalNumber a, RationalNumber b) {
+    int resn = a.n * b.n;
+    int resd = a.d * b.d;
+    return new RationalNumber(resn, resd);
+  }
+
+  @Override
   // Divide
-  public RationalNumber div(RationalNumber b) throws Exception {
+  public RationalNumber div(RationalNumber b) {
     /*   x   m   (x * n)
      *   - / - = -------
      *   y   n   (y * m)
      */
-    return this.mult(b.reciprocal());
+    return this.mul(b.reciprocal());
   }
 
-  public RationalNumber reciprocal() throws Exception {
+  public RationalNumber reciprocal() {
     return new RationalNumber(this.d, this.n);
   }
 
-  public RationalNumber add(RationalNumber b) throws Exception {
+  @Override
+  public RationalNumber add(RationalNumber b) {
     /*   x   m   (n * x + m * y)
      *   - + - = ---------------
      *   y   n       (y * n)
@@ -80,11 +95,14 @@ public class RationalNumber {
     return new RationalNumber(resn, resd);
   }
 
-  public RationalNumber subtract(RationalNumber b) throws Exception {
-    return this.add(b.negate());
+  @Override
+  public RationalNumber sub(RationalNumber b) {
+    // A - B == A + (-B)
+    return this.add(b.neg());
   }
 
-  public RationalNumber negate() throws Exception {
+  @Override
+  public RationalNumber neg() {
     return new RationalNumber(-this.n, this.d);
   }
 

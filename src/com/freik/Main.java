@@ -15,8 +15,10 @@ public class Main {
 
   public static void main(String[] args) {
     try {
-      RationalNumber.sample();
+      RationalNumber.test();
+      RationalNumber num = new RationalNumber(5, 7);
       float pi = 3.1415926f;
+      float oneThird = 1.0f / 3.0f;
       // .31415926 * 10^1
       float ff = 50.5f;
       // .505 * 10^2
@@ -37,28 +39,28 @@ public class Main {
       }
       // Easy Add/Subtract:
       Check("3.4 + 0.0 = 3.4", v34.add(zero), 3, 4);
-      Check("3.4 - 0.0 = 3.4", v34.subtract(zero), 3, 4);
+      Check("3.4 - 0.0 = 3.4", v34.sub(zero), 3, 4);
       Check("0.0 + 3.4 = 3.4", zero.add(v34), 3, 4);
       // Slightly harder
       Check("3.4 + 1.0 = 4.4", v34.add(one), 4, 4);
-      Check("3.4 - 1.0 = 2.4", v34.subtract(one), 2, 4);
+      Check("3.4 - 1.0 = 2.4", v34.sub(one), 2, 4);
       // Harder still
       Check("3.4 + 1.1 = 4.5", v34.add(v11), 4, 5);
       Check("3.4 + 6.6 = 10.0", v34.add(v66), 10, 0);
-      Check("3.0 - 2.9 = 0.1", v30.subtract(v29), 0, 1);
+      Check("3.0 - 2.9 = 0.1", v30.sub(v29), 0, 1);
       // Easy Multiply tests
-      Check("3.4 * 0.0 = 3.4", v34.multiply(zero), 0, 0);
-      Check("3.4 * 1.0 = 3.4", v34.multiply(one), 3, 4);
+      Check("3.4 * 0.0 = 3.4", v34.mul(zero), 0, 0);
+      Check("3.4 * 1.0 = 3.4", v34.mul(one), 3, 4);
       // A little harder multiply
-      Check("2.0 * 2.0 = 4.0", two.multiply(two), 4, 0);
-      Check("1.1 * 2.0 = 2.2", v11.multiply(two), 2, 2);
+      Check("2.0 * 2.0 = 4.0", two.mul(two), 4, 0);
+      Check("1.1 * 2.0 = 2.2", v11.mul(two), 2, 2);
       // Rounding?
-      Check("3.4 * 1.1 = 3.7", v34.multiply(v11), 3, 7);
-      Check("6.6 * 1.1 = 7.3", v66.multiply(v11), 7, 3);
+      Check("3.4 * 1.1 = 3.7", v34.mul(v11), 3, 7);
+      Check("6.6 * 1.1 = 7.3", v66.mul(v11), 7, 3);
       // Divide is arguably complicated
-      Check("3.4 / 1.0 = 3.4", v34.divide(one), 3, 4);
-      Check("6.6 / 2.0 = 3.3", v66.divide(two), 3, 3);
-      Check("6.6 / 1.1 = 6.0", v66.divide(v11), 6, 0);
+      Check("3.4 / 1.0 = 3.4", v34.div(one), 3, 4);
+      Check("6.6 / 2.0 = 3.3", v66.div(two), 3, 3);
+      Check("6.6 / 1.1 = 6.0", v66.div(v11), 6, 0);
     } catch (Exception e) {
       System.out.println("Your program crashed. You probably divided by zero.");
     }
