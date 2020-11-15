@@ -61,8 +61,13 @@ public class Main {
       Check("3.4 / 1.0 = 3.4", v34.div(one), 3, 4);
       Check("6.6 / 2.0 = 3.3", v66.div(two), 3, 3);
       Check("6.6 / 1.1 = 6.0", v66.div(v11), 6, 0);
+      Line.test();
     } catch (Exception e) {
       System.out.println("Your program crashed. You probably divided by zero.");
     }
+  }
+
+  public static void DrawingStuff() {
+
   }
 }

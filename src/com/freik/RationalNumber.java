@@ -2,24 +2,34 @@ package com.freik;
 
 // TODO; Good example for static methods!
 // https://github.com/kevinfrei/Learning
-public class RationalNumber implements INumber<RationalNumber> {
+public class RationalNumber {
   // Numerator & Denominator
-  private int n, d;
+  // D is always positive
+  // N / D is always fully simplified
+  public int n, d;
 
   // This is for some simple testing
   public static void test() {
     int num = 1;
     RationalNumber a = new RationalNumber(48, 96); // 1/2 == .5
+    RationalNumber r = a.reciprocal();
+
+    // r =? 96/48
+    System.out.printf("a = %s, reciprocal = %s\n", a, r);
     System.out.printf("a = %s\n", a);
     RationalNumber b = new RationalNumber(2, 3);
     System.out.printf("b = %s\n", b);
     RationalNumber c = a.mul(b); // a * b
-    RationalNumber s = RationalNumber.statMul(a, b);
 
     System.out.printf("%s * %s = %s\n", a, b, c);
-    RationalNumber d = a.mul(b.div(c));
-    System.out.printf("%s * %s / %s = %s\n", a, b, c, d);
+    RationalNumber d = a.add(b);
+    System.out.printf("%s + %s = %s\n", a, b, d);
+    RationalNumber e = d.sub(b);
+    System.out.printf("%s - %s = %s\n", d, b, e);
+
   }
+
+
 
   // Constructor
   public RationalNumber(/* RationNumber this, */ int numer, int denom) {
@@ -31,7 +41,7 @@ public class RationalNumber implements INumber<RationalNumber> {
     // simplify the values
     // Doing this in the constructor makes it so the rest of the code
     // doesn't have to worry about these details
-    for (int i = 2; i <= this.d && i <= this.n; i++) {
+    for (int i = 2; i <= this.d || i <= this.n; i++) {
       while (this.n % i == 0 && this.d % i == 0) {
         this.n = this.n / i;
         this.d = this.d / i;
@@ -45,7 +55,6 @@ public class RationalNumber implements INumber<RationalNumber> {
     // (1, -2) => (-1, 2)
   }
 
-  @Override
   // Multiply
   public RationalNumber mul(/* RationalNumber this, */ RationalNumber b) {
     /*   x   m   (x * m)
@@ -55,32 +64,30 @@ public class RationalNumber implements INumber<RationalNumber> {
     // Normal, non-static method
     // System.out.println(this.n);
     // System.out.println(this.d);
-    int resn = this.n * b.n;
-    int resd = this.d * b.d;
-    return new RationalNumber(resn, resd);
+    int x = this.n;
+    int y = this.d;
+    int m = b.n;
+    int n = b.d;
+
+    return new RationalNumber(x * m, y * n);
   }
 
-  public static RationalNumber statMul(RationalNumber a, RationalNumber b) {
-    int resn = a.n * b.n;
-    int resd = a.d * b.d;
-    return new RationalNumber(resn, resd);
-  }
-
-  @Override
   // Divide
-  public RationalNumber div(RationalNumber b) {
+  public RationalNumber div(/* RationalNumber this */ RationalNumber b) {
     /*   x   m   (x * n)
      *   - / - = -------
      *   y   n   (y * m)
      */
+    // divide a / b == a * (1/b)
+    // divide this / b = this * 1/b
     return this.mul(b.reciprocal());
   }
 
-  public RationalNumber reciprocal() {
+  public RationalNumber reciprocal(/* RationalNumber this */) {
     return new RationalNumber(this.d, this.n);
   }
 
-  @Override
+
   public RationalNumber add(RationalNumber b) {
     /*   x   m   (n * x + m * y)
      *   - + - = ---------------
@@ -90,23 +97,21 @@ public class RationalNumber implements INumber<RationalNumber> {
     int y = this.d;
     int m = b.n;
     int n = b.d;
-    int resn = n * x + m * y;
-    int resd = y * n;
-    return new RationalNumber(resn, resd);
+    return new RationalNumber(n * x + m * y, y * n);
   }
 
-  @Override
-  public RationalNumber sub(RationalNumber b) {
-    // A - B == A + (-B)
+
+  public RationalNumber sub(/* RationalNumber this, */RationalNumber b) {
+    // Subtract: this - b --> this + (-b)
     return this.add(b.neg());
   }
 
-  @Override
+
   public RationalNumber neg() {
     return new RationalNumber(-this.n, this.d);
   }
 
-  @Override
+
   public String toString() {
     if (this.d == 1) return Integer.toString(this.n);
     return Integer.toString(this.n) + "/" + Integer.toString(this.d);
