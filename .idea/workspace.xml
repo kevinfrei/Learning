@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88eaa792-558e-42cd-9b7b-9da7c232c964" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/freik/Line.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/freik/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/freik/DrawnDot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/DrawnDot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/freik/DrawnLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/DrawnLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/freik/DrawnRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/DrawnRectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/freik/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/freik/RationalNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/RationalNumber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,10 +102,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="965" y="373" key="#com.intellij.ide.util.MemberChooser" timestamp="1605114498776">
+    <state x="965" y="373" key="#com.intellij.ide.util.MemberChooser" timestamp="1605662360125">
       <screen x="0" y="23" width="2304" height="1273" />
     </state>
-    <state x="965" y="373" key="#com.intellij.ide.util.MemberChooser/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1605114498776" />
+    <state x="965" y="373" key="#com.intellij.ide.util.MemberChooser/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1605662360125" />
     <state width="2262" height="361" key="GridCell.Tab.0.bottom" timestamp="1605400316683">
       <screen x="0" y="23" width="2304" height="1273" />
     </state>

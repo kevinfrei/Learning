@@ -1,5 +1,7 @@
 package com.freik;
 
+import java.awt.*;
+
 public class Main {
   private static void Check(String expr, FixedPoint val, int whole, int fraction) {
     FixedPoint check = new FixedPoint(whole, fraction);
@@ -67,7 +69,10 @@ public class Main {
     }
   }
 
-  public static void DrawingStuff() {
-
+  public static void DrawingStuff(Graphics g, IDrawnObject[] objects) {
+    for (int i = 0; i < objects.length; i++){
+     IDrawnObject o = objects[i];
+     o.Draw(g);
+    }
   }
 }

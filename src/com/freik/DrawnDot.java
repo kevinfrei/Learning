@@ -5,7 +5,11 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
 public class DrawnDot implements IDrawnObject {
-
+  int X, Y;
+  public DrawnDot(int x, int y) {
+    this.X = x;
+    this.Y = y;
+  }
   @Override
   public Rectangle2D bounds() {
     return null;
@@ -23,6 +27,6 @@ public class DrawnDot implements IDrawnObject {
 
   @Override
   public void Draw(Graphics drawingSurface) {
-
+    drawingSurface.fillRect(this.X,this.Y,1,1);
   }
 }
