@@ -1,43 +1,93 @@
 package com.freik;
 
-public class FixedPoint implements INumber<FixedPoint> {
-  int w, f;
+import sun.jvm.hotspot.utilities.Assert;
+
+public class FixedPoint {
+  // WHole value
+  int w;
+  // Fractional
+  int f;
+  // Sign
+  boolean isNegative;
 
   public FixedPoint(/*FixedPoint this, */ int whole, int fraction) {
-    // Fraction should be from 0-9. Anything else is "out of range" logically
-    // Remember, the constructor is a good place to "normalize" all your data:
     this.w = whole;
     this.f = fraction;
+    if (fraction > 9 || fraction < 0) {
+      throw new IllegalArgumentException("You idiot: Only pass in 0-9 for fractional values");
+    }
+    if (whole < 0) {
+      isNegative = true;
+      whole = -whole;
+    } else {
+      isNegative = false;
+    }
   }
 
-  @Override
-  public FixedPoint add(FixedPoint b) {
-    // WWWWWWWW.F
-    // wwwwwwww.f
-    //          (F + f)
-    // 1.4 + 2.5 =
-    // this.w = 1, this.f = 4
-    // b.w = 2, b.f = 5
-    int newW = this.w + b.w;
-    int newF = this.f + b.f;
-    if (newF > 9) {
-      newW = newW + 1;
-      newF = newF - 10;
+  public FixedPoint(/* FixedPoint this, */ int whole) {
+    this.w = Math.abs(whole);
+    this.f = 0;
+    this.isNegative = (whole < 0);
+  }
+
+  public FixedPoint(/* FixedPoint this, */ double d) {
+    // w & f should always be positive
+    this.w = (int) Math.abs(d);
+    this.f = (int) (Math.abs(d) * 10) % 10;
+    this.isNegative = (d < 0) ? true : false;
+  }
+
+  public boolean equals(/* FixedPoint this, */ FixedPoint b) {
+    boolean res = true;
+    if (this.w != b.w) {
+      res = false;
+    } else if (this.f != b.f) {
+      res = false;
     }
-    return new FixedPoint(newW, newF);
+    return res;
+  }
+
+  public FixedPoint add(/* FixedPoint this, */ FixedPoint b) {
+    // W.F
+    // w.f
+    int whole, fraction, carry;
+    fraction = this.f + b.f;
+    if (fraction > 9) {
+      fraction = fraction % 10;
+      carry = 1;
+    } else {
+      carry = 0;
+    }
+    whole = carry + this.w + b.w;
+    return new FixedPoint(whole, fraction);
   }
 
   @Override
   public FixedPoint sub(FixedPoint b) {
-    int newF = this.f - b.f;
-    if (newF < 0) {
-      // This is for a borrow code
-      int newW = this.w - b.w - 1;
-      return new FixedPoint(newW, newF + 10);
-    } else {
-      int newW = this.w - b.w;
-      return new FixedPoint(newW, newF);
+    // 1.2 - 1.6
+    // -a - -b
+    // -a - b
+    // a - -b
+    // a - b
+    if (this.isNegative && b.isNegative) {
+      // -4 - -2 = -4 + 2
+      return this.add(b.neg());
+    } else if (this.isNegative && !b.isNegative) {
+      // -4 - 2 = -(-(-4) + 2)
+      return this.neg().add(b).neg();
+    } else if (!this.isNegative && b.isNegative) {
+      // 4 - -2
+      return this.add(b.neg());
+    } else if (!this.isNegative && !b.isNegative) {
+      // Fall through
     }
+    int newW = this.w - b.w; // 0
+    int newF = this.f - b.f; // -4
+    if (newF < 0) {
+      newF = -newF;
+      return new FixedPoint(true, newW, newF);
+    }
+    return new FixedPoint(newW, newF);
   }
 
   private FixedPoint fracMult(int fract) {
@@ -85,12 +135,9 @@ public class FixedPoint implements INumber<FixedPoint> {
 
   @Override
   public FixedPoint neg() {
-    return new FixedPoint(-this.w, this.f);
+    return new FixedPoint(!this.isNegative, this.w, this.f);
   }
 
-  public boolean equals(FixedPoint b) {
-    return this.w == b.w && this.f == b.f;
-  }
 
   public boolean lessThan(FixedPoint b) {
     if (this.w == b.w) return this.f < b.w;

@@ -26,14 +26,23 @@ public class Main {
       // .505 * 10^2
       float something = 1123794812.1f;
       // .1237948121123412341234 * 10^10
-      FixedPoint zero = new FixedPoint(0, 0); // 0.0
-      FixedPoint one = new FixedPoint(1, 0); // 1.0
-      FixedPoint two = new FixedPoint(2, 0); // 2.0
+      FixedPoint zero = new FixedPoint(0); // 0.0
+      FixedPoint one = new FixedPoint(1); // 1.0
+      FixedPoint two = new FixedPoint(2); // 2.0
       FixedPoint v11 = new FixedPoint(1, 1); // 1.1
       FixedPoint v34 = new FixedPoint(3, 4); // 3.4
-      FixedPoint v66 = new FixedPoint(6, 6); // 6.6
-      FixedPoint v30 = new FixedPoint(3, 0);
-      FixedPoint v29 = new FixedPoint(2, 9);
+      FixedPoint v66 = new FixedPoint(6.6); // 6.6
+      FixedPoint v30 = new FixedPoint(3);
+      FixedPoint v29 = new FixedPoint(2.9);
+      FixedPoint neg34 = new FixedPoint(-3, 4);
+      FixedPoint v37 = new FixedPoint(3, 7);
+      FixedPoint v49 = new FixedPoint(4, 9);
+      FixedPoint v86 = v37.add(v49);
+      FixedPoint elevenPoint5 = v86.add(v29);
+      if (zero.equals(one)) {
+        System.out.println("The universe is broken!");
+      }
+
       // Check equals for basic functioning
       if (!v34.equals(v34) || !one.equals(one) || v34.equals(one) || one.equals(v34)) {
         System.out.println("equals seems broken. Without that working, nothing else will work properly.");

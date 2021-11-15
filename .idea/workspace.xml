@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,9 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88eaa792-558e-42cd-9b7b-9da7c232c964" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/freik/DrawnDot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/DrawnDot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/freik/DrawnLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/DrawnLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/freik/DrawnRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/DrawnRectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/freik/FixedPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/FixedPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/freik/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/freik/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,57 +103,24 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="965" y="373" key="#com.intellij.ide.util.MemberChooser" timestamp="1605662360125">
-      <screen x="0" y="23" width="2304" height="1273" />
+    <state x="416" y="92" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1633191926888">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="965" y="373" key="#com.intellij.ide.util.MemberChooser/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1605662360125" />
-    <state width="2262" height="361" key="GridCell.Tab.0.bottom" timestamp="1605400316683">
-      <screen x="0" y="23" width="2304" height="1273" />
+    <state x="837" y="391" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1280.741.1280.775/0.25.2304.1271@0.25.2304.1271" timestamp="1632842403144" />
+    <state x="416" y="92" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1280.775@0.25.1280.775" timestamp="1633191926888" />
+    <state x="39" y="0" key="SettingsEditor" timestamp="1633192470123">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="2262" height="361" key="GridCell.Tab.0.bottom/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1605400316683" />
-    <state width="2262" height="361" key="GridCell.Tab.0.center" timestamp="1605400316682">
-      <screen x="0" y="23" width="2304" height="1273" />
+    <state x="39" y="0" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1633192470123" />
+    <state x="640" y="25" width="640" height="775" key="dock-window-1" timestamp="1635549562744">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="2262" height="361" key="GridCell.Tab.0.center/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1605400316682" />
-    <state width="2262" height="361" key="GridCell.Tab.0.left" timestamp="1605400316681">
-      <screen x="0" y="23" width="2304" height="1273" />
+    <state x="640" y="521" width="640" height="775" key="dock-window-1/-1280.741.1280.775/0.25.2304.1271@0.25.2304.1271" timestamp="1633532788213" />
+    <state x="640" y="25" width="640" height="775" key="dock-window-1/0.25.1280.775@0.25.1280.775" timestamp="1635549562744" />
+    <state x="0" y="25" width="640" height="775" key="dock-window-2" timestamp="1635549562744">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="2262" height="361" key="GridCell.Tab.0.left/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1605400316681" />
-    <state width="2262" height="361" key="GridCell.Tab.0.right" timestamp="1605400316682">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state width="2262" height="361" key="GridCell.Tab.0.right/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1605400316682" />
-    <state width="2262" height="444" key="GridCell.Tab.1.bottom" timestamp="1604509950961">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state width="2262" height="444" key="GridCell.Tab.1.bottom/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604509950961" />
-    <state width="2262" height="444" key="GridCell.Tab.1.center" timestamp="1604509950960">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state width="2262" height="444" key="GridCell.Tab.1.center/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604509950960" />
-    <state width="2262" height="444" key="GridCell.Tab.1.left" timestamp="1604509950960">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state width="2262" height="444" key="GridCell.Tab.1.left/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604509950960" />
-    <state width="2262" height="444" key="GridCell.Tab.1.right" timestamp="1604509950961">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state width="2262" height="444" key="GridCell.Tab.1.right/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604509950961" />
-    <state x="900" y="329" key="SettingsEditor" timestamp="1604450590409">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state x="900" y="329" key="SettingsEditor/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604450590409" />
-    <state x="1644" y="204" width="1958" height="865" key="dock-window-1" timestamp="1604452531502">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state x="1644" y="204" width="1958" height="865" key="dock-window-1/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604452531502" />
-    <state x="817" y="310" key="run.anything.popup" timestamp="1604453264453">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state x="817" y="310" key="run.anything.popup/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1604453264453" />
-    <state x="817" y="312" width="670" height="676" key="search.everywhere.popup" timestamp="1605396824965">
-      <screen x="0" y="23" width="2304" height="1273" />
-    </state>
-    <state x="817" y="312" width="670" height="676" key="search.everywhere.popup/-1440.817.1440.877/0.23.2304.1273@0.23.2304.1273" timestamp="1605396824965" />
+    <state x="0" y="521" width="640" height="775" key="dock-window-2/-1280.741.1280.775/0.25.2304.1271@0.25.2304.1271" timestamp="1633532788214" />
+    <state x="0" y="25" width="640" height="775" key="dock-window-2/0.25.1280.775@0.25.1280.775" timestamp="1635549562744" />
   </component>
 </project>
